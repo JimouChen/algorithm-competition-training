@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int tenToTwo(int decimal) {
@@ -17,6 +16,18 @@ int tenToTwo(int decimal) {
 }
 
 int main() {
-    cout << tenToTwo(11);
+    stringstream ss;
+    string str;
+    getline(cin, str);
+    ss << str;
+    stack<string> s;
+    while (ss >> str) {
+        s.push(str);
+    }
+    while (!s.empty()) {
+        cout << s.top();
+        if (s.size() != 1) cout << ' ';
+        s.pop();
+    }
     return 0;
 }
