@@ -76,7 +76,7 @@ int main() {
 Process finished with exit code 0
 ```
 
-##substr取子串
+## substr取子串
 ```c++
 #include <bits/stdc++.h>
 
