@@ -430,7 +430,7 @@ int main() {
 ```
 12455
 Process finished with exit code 0
-```c++
+```
 ## 数字转换为字符串
 ### 方法一
 ```
