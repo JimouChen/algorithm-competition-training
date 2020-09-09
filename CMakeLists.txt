@@ -8,6 +8,14 @@ add_executable(test TestAll/test.cpp)
 add_executable(testString TestAll/testString.cpp)
 add_executable(testSTL TestAll/testSTL.cpp)
 
-
+#BlueBridge
 add_executable(NumberOfWalnuts BlueBridge/NumberOfWalnuts.cpp)
 add_executable(BaseConversion BlueBridge/BaseConversion.cpp)
+
+#Template
+add_executable(FullArray AlgorithmTemplate/FullArray.cpp)
+
+#oj
+add_executable(full_array oj/full_array.cpp)
+add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
+add_executable(BracketMatching AlgorithmTemplate/BracketMatching.cpp)
