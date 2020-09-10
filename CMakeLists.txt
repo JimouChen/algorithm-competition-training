@@ -14,8 +14,13 @@ add_executable(BaseConversion BlueBridge/BaseConversion.cpp)
 
 #Template
 add_executable(FullArray AlgorithmTemplate/FullArray.cpp)
+add_executable(BracketMatching AlgorithmTemplate/BracketMatching.cpp)
+add_executable(BF_match_string AlgorithmTemplate/BF_match_string.cpp)
+add_executable(BinaryTree AlgorithmTemplate/Tree/BinaryTree.cpp)
+add_executable(BSTree AlgorithmTemplate/Tree/BSTree.cpp)
+
+
 
 #oj
 add_executable(full_array oj/full_array.cpp)
 add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
-add_executable(BracketMatching AlgorithmTemplate/BracketMatching.cpp)
