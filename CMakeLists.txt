@@ -24,3 +24,8 @@ add_executable(BSTree AlgorithmTemplate/Tree/BSTree.cpp)
 #oj
 add_executable(full_array oj/full_array.cpp)
 add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
+
+# task_homework
+add_executable(Q1_3 "course/Design and Analysis of Algorithms/week2/Q1_3.cpp")
+add_executable(Q1_5 "course/Design and Analysis of Algorithms/week2/Q1_5.cpp")
+add_executable(Q2_4 "course/Design and Analysis of Algorithms/week2/Q2_4.cpp")
