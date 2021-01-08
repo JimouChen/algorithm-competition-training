@@ -29,3 +29,7 @@ add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
 add_executable(Q1_3 "course/Design and Analysis of Algorithms/week2/Q1_3.cpp")
 add_executable(Q1_5 "course/Design and Analysis of Algorithms/week2/Q1_5.cpp")
 add_executable(Q2_4 "course/Design and Analysis of Algorithms/week2/Q2_4.cpp")
+add_executable(exp5 course/software_test/exp5.cpp)
+add_executable(review_all course/review/review_all.cpp)
+
+add_executable(test_guard course/CPPLearning/base/test_guard.cpp course/CPPLearning/base/guard.h)
