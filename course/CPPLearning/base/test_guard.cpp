@@ -1,0 +1,10 @@
+#pragma once
+
+#include <iostream>
+#include "guard.h"
+
+using namespace std;
+
+int main() {
+    return 0;
+}
