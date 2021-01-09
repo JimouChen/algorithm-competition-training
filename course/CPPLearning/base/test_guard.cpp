@@ -17,5 +17,17 @@ int main() {
     cout << c2.real() << " " << c2.imag()<<"\n";
     cout << c3.real() << " " << c3.imag()<<"\n";
     cout << complex.real() << " " << complex.imag()<<"\n";
+    //test MakeString
+    MakeString *m1 = new MakeString("hello");
+    MakeString m2("");
+    MakeString m3("world");
+    cout<<m3.data<<endl;
+    cout<<m1->data<<endl;
+    m2 = m3;
+    cout<<m2.data<<endl;
+    MakeString m4(m3);
+    cout<<m4.data<<endl;
+
+
     return 0;
 }
