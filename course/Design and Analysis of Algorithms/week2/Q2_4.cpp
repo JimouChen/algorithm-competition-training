@@ -7,6 +7,7 @@ int T(int n) {
         return 1;
     else if (n > 1)
         return 2 * T(n / 3) + n;
+//    return 0;
 }
 
 int main() {

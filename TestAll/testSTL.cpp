@@ -1,33 +1,25 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
-int tenToTwo(int decimal) {
-    stack<int> s;
-    int res = 0;
-    while (decimal != 0) {
-        s.push(decimal % 2);
-        decimal /= 2;
-    }
-    while (!s.empty()) {
-        res = res * 10 + s.top();
-        s.pop();
-    }
-    return res;
-}
 
 int main() {
-    stringstream ss;
-    string str;
-    getline(cin, str);
-    ss << str;
-    stack<string> s;
-    while (ss >> str) {
-        s.push(str);
-    }
-    while (!s.empty()) {
-        cout << s.top();
-        if (s.size() != 1) cout << ' ';
-        s.pop();
-    }
+    list<int> list;
+    list.push_front(2);
+    list.push_front(3);
+    list.push_back(4);
+    list.push_back(1);
+    for (auto i: list)
+        cout << i << ' ';
+    cout << endl;
+    //插入
+    list.insert(++list.begin(), 99);
+    for (auto i: list)
+        cout << i << ' ';
+    cout << endl;
+    //里面的值
+    list.remove(3);
+    for (auto i: list)
+        cout << i << ' ';
     return 0;
 }

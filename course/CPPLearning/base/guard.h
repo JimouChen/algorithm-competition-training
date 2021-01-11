@@ -62,10 +62,11 @@ private:
     char *data1;
 public:
     char *data;
+
     MakeString(const char *str);
 
     MakeString(const MakeString &str);//拷贝构造
-    MakeString& operator=(const MakeString &str);//拷贝赋值
+    MakeString &operator=(const MakeString &str);//拷贝赋值
 
     ~MakeString();
 };
@@ -99,5 +100,15 @@ MakeString &MakeString::operator=(const MakeString &str) {
 MakeString::~MakeString() {
     delete[] data;
 }
-
+//
+//class Account {
+//public:
+//    static double rate;
+//
+//    static void set_rate(const double &x) {
+//        rate = x;
+//    }
+//};
+//
+//double Account::rate = 5.0;
 #endif //ALGORITHM_COMPETITION_TRAINING_GUARD_H
