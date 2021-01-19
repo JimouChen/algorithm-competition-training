@@ -3,7 +3,7 @@ project(algorithm-competition-training)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(algorithm-competition-training main.cpp)
+add_executable(algorithm-competition-training main.cpp course/CPPLearning/practice/practice1.cpp course/CPPLearning/practice/practice2.cpp)
 add_executable(test TestAll/test.cpp)
 add_executable(testString TestAll/testString.cpp)
 add_executable(testSTL TestAll/testSTL.cpp)
@@ -33,3 +33,5 @@ add_executable(exp5 course/software_test/exp5.cpp)
 add_executable(review_all course/review/review_all.cpp)
 
 add_executable(test_guard course/CPPLearning/base/test_guard.cpp course/CPPLearning/base/guard.h)
+add_executable(practice1 course/CPPLearning/practice/practice1.cpp)
+add_executable(practice2 course/CPPLearning/practice/practice2.cpp)
