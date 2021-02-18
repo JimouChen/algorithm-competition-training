@@ -35,3 +35,5 @@ add_executable(review_all course/review/review_all.cpp)
 add_executable(test_guard course/CPPLearning/base/test_guard.cpp course/CPPLearning/base/guard.h)
 add_executable(practice1 course/CPPLearning/practice/practice1.cpp)
 add_executable(practice2 course/CPPLearning/practice/practice2.cpp)
+
+add_executable(sort_algorithm AlgorithmTemplate/Sort/sort_algorithm.cpp)
