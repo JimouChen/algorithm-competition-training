@@ -37,3 +37,16 @@ add_executable(practice1 course/CPPLearning/practice/practice1.cpp)
 add_executable(practice2 course/CPPLearning/practice/practice2.cpp)
 
 add_executable(sort_algorithm AlgorithmTemplate/Sort/sort_algorithm.cpp)
+
+# exp
+add_executable(task1 course/CPPLearning/exp/exp1/task1.cpp)
+add_executable(task2 course/CPPLearning/exp/exp1/task2.cpp)
+add_executable(task3 course/CPPLearning/exp/exp1/task3.cpp)
+add_executable(task4 course/CPPLearning/exp/exp1/task4.cpp)
+add_executable(task5 course/CPPLearning/exp/exp1/task5.cpp)
+
+#add_executable(task21 course/CPPLearning/exp/exp2/task21.cpp)
+add_executable(task21 course/CPPLearning/exp/exp2/task21.cpp)
+add_executable(task22 course/CPPLearning/exp/exp2/task22.cpp)
+add_executable(task23 course/CPPLearning/exp/exp2/task23.cpp)
+add_executable(task24 course/CPPLearning/exp/exp2/task24.cpp)
