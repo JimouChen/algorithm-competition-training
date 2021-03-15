@@ -53,3 +53,4 @@ add_executable(task24 course/CPPLearning/exp/exp2/task24.cpp)
 
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
+add_executable(leetcode229 oj/leetcode/leetcode229.cpp)
