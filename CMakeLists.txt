@@ -50,7 +50,11 @@ add_executable(task21 course/CPPLearning/exp/exp2/task21.cpp)
 add_executable(task22 course/CPPLearning/exp/exp2/task22.cpp)
 add_executable(task23 course/CPPLearning/exp/exp2/task23.cpp)
 add_executable(task24 course/CPPLearning/exp/exp2/task24.cpp)
+add_executable(task25 course/CPPLearning/exp/exp2/task25.cpp)
+add_executable(task26 course/CPPLearning/exp/exp2/task26.cpp)
 
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
 add_executable(leetcode229 oj/leetcode/leetcode229.cpp)
+add_executable(leetcode59 oj/leetcode/leetcode59.cpp)
+add_executable(leetcode150 oj/leetcode/leetcode150.cpp)
