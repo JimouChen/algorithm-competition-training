@@ -22,8 +22,9 @@ add_executable(BSTree AlgorithmTemplate/Tree/BSTree.cpp)
 
 
 #oj
-add_executable(full_array oj/full_array.cpp)
+add_executable(full_array oj/templateAlg/full_array.cpp)
 add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
+add_executable(dfsMuse oj/templateAlg/dfsMuse.cpp)
 
 # task_homework
 add_executable(Q1_3 "course/Design and Analysis of Algorithms/week2/Q1_3.cpp")
@@ -60,3 +61,4 @@ add_executable(leetcode59 oj/leetcode/leetcode59.cpp)
 add_executable(leetcode150 oj/leetcode/leetcode150.cpp)
 add_executable(leetcode73 oj/leetcode/leetcode73.cpp)
 add_executable(leetcode324 oj/leetcode/leetcode324.cpp)
+
