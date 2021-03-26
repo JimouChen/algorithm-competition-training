@@ -21,5 +21,6 @@ int main() {
     list.remove(3);
     for (auto i: list)
         cout << i << ' ';
+
     return 0;
 }

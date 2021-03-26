@@ -47,13 +47,19 @@ add_executable(task3 course/CPPLearning/exp/exp1/task3.cpp)
 add_executable(task4 course/CPPLearning/exp/exp1/task4.cpp)
 add_executable(task5 course/CPPLearning/exp/exp1/task5.cpp)
 
-#add_executable(task21 course/CPPLearning/exp/exp2/task21.cpp)
 add_executable(task21 course/CPPLearning/exp/exp2/task21.cpp)
 add_executable(task22 course/CPPLearning/exp/exp2/task22.cpp)
 add_executable(task23 course/CPPLearning/exp/exp2/task23.cpp)
 add_executable(task24 course/CPPLearning/exp/exp2/task24.cpp)
 add_executable(task25 course/CPPLearning/exp/exp2/task25.cpp)
 add_executable(task26 course/CPPLearning/exp/exp2/task26.cpp)
+
+#add_executable(task31 course/CPPLearning/exp/exp3/task31.cpp)
+add_executable(task31 course/CPPLearning/exp/exp3/task31.cpp)
+add_executable(task32 course/CPPLearning/exp/exp3/task32.cpp)
+add_executable(task33 course/CPPLearning/exp/exp3/task33.cpp)
+add_executable(task34 course/CPPLearning/exp/exp3/task34.cpp)
+
 
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
@@ -62,5 +68,3 @@ add_executable(leetcode59 oj/leetcode/leetcode59.cpp)
 add_executable(leetcode150 oj/leetcode/leetcode150.cpp)
 add_executable(leetcode73 oj/leetcode/leetcode73.cpp)
 add_executable(leetcode324 oj/leetcode/leetcode324.cpp)
-
-
