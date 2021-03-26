@@ -2,60 +2,78 @@
 
 using namespace std;
 
+// Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
 
-long long int get_s(long long int n) {
-    long long int num = 0;
-    while (n != 0) {
-        num = num + n % 10;
-        n = n / 10;
+    ListNode() : val(0), next(nullptr) {}
+
+    ListNode(int x) : val(x), next(nullptr) {}
+
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+class Solution {
+public:
+    //获取vector元素的个数
+    map<int, int> getCount(vector<int> &node) {
+        map<int, int> dict_res;
+        for (int i = 0; i < node.size(); i++) {
+            dict_res[node[i]]++;
+        }
+        return dict_res;
     }
-    return num;
-}
 
-int get_len(vector<long long int> &v) {
-    int c = 0;
-    for (auto i : v) {
-        c++;
-    }
-    return c;
-}
-
-long long int get_qiann(vector<long long int> &v1, int n) {
-    long long int sum = 0;
-    int c = 0;
-    for (auto i : v1) {
-        if (c == n)break;
-        c++;
-        sum += i;
-    }
-    return sum;
-}
-
-int main() {
-    int n;
-    cin >> n;
-    vector<vector<long long int >> all;
-    for (int t = 1; t <= 50; t++) {
-        vector<long long int> a;
-        int flag = 0;
-        for (int i = 0; i <= 100000; i++) {
-            long long int s = get_s(i);
-            if (s == t) {
-                a.push_back(i);
-                flag = 1;
+    ListNode *deleteDuplicates(ListNode *head) {
+        if (!head) return nullptr;
+        vector<int> all_node;
+        ListNode *p = head;
+        while (p) {
+            all_node.push_back(p->val);
+            p = p->next;
+        }
+        map<int, int> count_res = getCount(all_node);
+        vector<int> new_res;
+        for (auto item: count_res) {
+            if (item.second == 1) {
+                new_res.push_back(item.first);
             }
         }
-        if (flag == 0)break;
-        all.push_back(a);
-    }
-    long long int min_ = 999999999;
-    for (auto e  : all) {
-        if (get_len(e) >= n) {
-            min_ = min(min_, get_qiann(e, n));
+        int len = new_res.size();
+        if (len == 0)return nullptr;
+
+        ListNode *new_head = new ListNode[sizeof(ListNode)];
+        new_head->val = new_res[0];
+        ListNode *q = new_head;
+        for (int i = 1; i < len; ++i) {
+            ListNode *ne = new ListNode[sizeof(ListNode)];
+            ne->val = new_res[i];
+            new_head->next = ne;
+            new_head = ne;
         }
+        return q;
     }
-    cout<<min_;
+};
 
 
+int main() {
+    Solution s;
+    ListNode a1(1);
+    ListNode a2(1);
+    ListNode a3(2);
+    ListNode a4(3);
+    ListNode a5(49);
+    ListNode a6(49);
+    a1.next = &a2;
+    a2.next = &a3;
+    a3.next = &a4;
+    a4.next = &a5;
+    a5.next = &a6;
+    ListNode *res = s.deleteDuplicates(&a1);
+    while (res) {
+        cout << res->val << endl;
+        res = res->next;
+    }
     return 0;
 }
