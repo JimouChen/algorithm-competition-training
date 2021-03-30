@@ -1,79 +1,67 @@
-#include <bits/stdc++.h>
+# include <bits/stdc++.h>
 
 using namespace std;
+vector<vector<int  >> res;
 
-// Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
+void show(vector<int> &nums) {
+    for (auto item: nums)
+        cout << item << " ";
+    cout << endl;
+}
 
-    ListNode() : val(0), next(nullptr) {}
+bool isPrime(int num) {
+    for (int i = 2; i <= sqrt(num); i++)
+        if (num % i == 0) return false;
+    return true;
+}
 
-    ListNode(int x) : val(x), next(nullptr) {}
-
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-class Solution {
-public:
-    //获取vector元素的个数
-    map<int, int> getCount(vector<int> &node) {
-        map<int, int> dict_res;
-        for (int i = 0; i < node.size(); i++) {
-            dict_res[node[i]]++;
-        }
-        return dict_res;
+bool isInVector(vector<int> &box, int target) {
+    for (int i = 0; i < box.size(); i++) {
+        if (target == box[i]) return true;
     }
+    return false;
+}
 
-    ListNode *deleteDuplicates(ListNode *head) {
-        if (!head) return nullptr;
-        vector<int> all_node;
-        ListNode *p = head;
-        while (p) {
-            all_node.push_back(p->val);
-            p = p->next;
+bool isPrimeCle(vector<int> &b) {
+    if (b[0] != 1) return false;
+    b.push_back(b[0]);
+    for (int i = 0; i < b.size() - 1; ++i) {
+        if (!isPrime(b[i] + b[i + 1])) {
+            b.pop_back();
+            return false;
         }
-        map<int, int> count_res = getCount(all_node);
-        vector<int> new_res;
-        for (auto item: count_res) {
-            if (item.second == 1) {
-                new_res.push_back(item.first);
-            }
-        }
-        int len = new_res.size();
-        if (len == 0)return nullptr;
-
-        ListNode *new_head = new ListNode[sizeof(ListNode)];
-        new_head->val = new_res[0];
-        ListNode *q = new_head;
-        for (int i = 1; i < len; ++i) {
-            ListNode *ne = new ListNode[sizeof(ListNode)];
-            ne->val = new_res[i];
-            new_head->next = ne;
-            new_head = ne;
-        }
-        return q;
     }
-};
+    b.pop_back();
+    return true;
 
+}
+
+void backtrack(vector<int> &nums, vector<int> &box) {
+    if (nums.size() == box.size() && isPrimeCle(box)) {
+        show(box);
+        return;
+    }
+    for (int i = 0; i < nums.size(); i++) {
+        if (isInVector(box, nums[i])) {
+            continue;
+        }
+        box.push_back(nums[i]);
+        backtrack(nums, box);
+        box.pop_back();
+    }
+}
 
 int main() {
-    Solution s;
-    ListNode a1(1);
-    ListNode a2(1);
-    ListNode a3(2);
-    ListNode a4(3);
-    ListNode a5(49);
-    ListNode a6(49);
-    a1.next = &a2;
-    a2.next = &a3;
-    a3.next = &a4;
-    a4.next = &a5;
-    a5.next = &a6;
-    ListNode *res = s.deleteDuplicates(&a1);
-    while (res) {
-        cout << res->val << endl;
-        res = res->next;
-    }
+    int n, cnt = 1;
+    while (~scanf("%d", &n)) {
+        vector<int> nums, box;
+        for (int i = 1; i <= n; i++)
+            nums.push_back(i);
+        cout << "Case " << cnt << endl;
+        backtrack(nums, box);
+        cnt++;
+        cout << endl;
+    };
+
     return 0;
 }
