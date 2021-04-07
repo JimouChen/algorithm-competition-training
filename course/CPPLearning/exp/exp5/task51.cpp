@@ -1,6 +1,5 @@
 # include<iostream>
 # include <cstring>
-
 using namespace std;
 
 class Data {
@@ -9,11 +8,8 @@ private:
     int age;
 public:
     Data(char *n, int a);
-
     char *getName();
-
     int getAge();
-
     void print();
 };
 
@@ -40,9 +36,7 @@ private:
     double sal;
 public:
     Teacher(char *n, double s, int a);
-
     double getSalary();
-
     void print();
 };
 
@@ -54,7 +48,7 @@ double Teacher::getSalary() {
 
 void Teacher::print() {
     cout << "name: " << getName() << ", age: " << getAge() << endl;
-    cout << "salary: " << getSalary() << endl;
+    cout << "salary: " << getSalary() << endl << endl;
 }
 
 class Student : public Data {
@@ -62,9 +56,7 @@ private:
     char id[20];
 public:
     Student(char *n, char *i, int a);
-
     char *getId();
-
     void print();
 };
 
@@ -79,7 +71,7 @@ char *Student::getId() {
 
 void Student::print() {
     cout << "name: " << getName() << ", age: " << getAge() << endl;
-    cout << "id: " << getId() << endl;
+    cout << "id: " << getId() << endl << endl;
 }
 
 class Postgrad : public Student {
@@ -87,9 +79,7 @@ private:
     char dn[20];
 public:
     Postgrad(char *n, char *i, char *d, int a);
-
     char *getDn();
-
     void print();
 };
 
@@ -105,13 +95,12 @@ char *Postgrad::getDn() {
 void Postgrad::print() {
     cout << "name: " << getName() << ", age: " << getAge() << endl;
     cout << "id: " << getId() << endl;
-    cout << "Dn: " << getDn() << endl;
+    cout << "Dn: " << getDn() << endl<< endl;
 }
 
 class Tpost : public Teacher, public Postgrad {
 public:
     Tpost(char *n, double s, char *i, char *d, int a);
-
     void print();
 };
 
@@ -121,18 +110,18 @@ void Tpost::print() {
     cout << "name: " << Teacher::getName() << ", age: " << Teacher::getAge() << endl;
     cout << "salary: " << getSalary() << endl;
     cout << "id: " << getId() << endl;
-    cout << "Dn: " << getDn() << endl;
+    cout << "Dn: " << getDn() << endl<< endl;
 }
 
 int main() {
-    Teacher t1("Tony", 6000, 21);
-    Student s1("Peter", "2021001123", 18);
-    Postgrad p1("Bob", "2018004123", "Computer", 33);
-    Tpost tp1("Jack", 100000, "2020005647", "Computer", 24);
+    Teacher teacher("Tony", 6000, 21);
+    Student student("Peter", "2021001123", 18);
+    Postgrad postgrad("Bob", "2018004123", "Computer", 33);
+    Tpost tpost("Jack", 100000, "2020005647", "Software", 24);
 
-    t1.print();
-    s1.print();
-    p1.print();
-    tp1.print();
+    teacher.print();
+    student.print();
+    postgrad.print();
+    tpost.print();
     return 0;
 }
