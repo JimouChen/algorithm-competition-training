@@ -38,8 +38,5 @@ CPU::~CPU() {
 }
 
 int main() {
-    CPU cpu;
-    cpu.run();
-    cpu.stop();
     return 0;
 }
