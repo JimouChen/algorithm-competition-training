@@ -27,6 +27,7 @@ add_executable(testTemplateBFS TestAll/testTemplateBFS.cpp)
 add_executable(dfsMuse oj/templateAlg/dfsMuse.cpp)
 add_executable(bingchaji oj/templateAlg/bingchaji.cpp)
 add_executable(01backbag oj/templateAlg/01backbag.cpp)
+add_executable(NQuene oj/templateAlg/NQuene.cpp)
 
 # task_homework
 add_executable(Q1_3 "course/Design and Analysis of Algorithms/week2/Q1_3.cpp")
@@ -68,6 +69,7 @@ add_executable(task51 course/CPPLearning/exp/exp5/task51.cpp)
 add_executable(task52 course/CPPLearning/exp/exp5/task52.cpp)
 add_executable(task53 course/CPPLearning/exp/exp5/task53.cpp)
 add_executable(task54 course/CPPLearning/exp/exp5/task54.cpp)
+add_executable(task55 course/CPPLearning/exp/exp5/task55.cpp)
 
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
@@ -81,3 +83,7 @@ add_executable(leetcode46-2 oj/leetcode/leetcode46-2.cpp)
 
 
 
+# DS review
+
+add_executable(SqListStatic course/DS_Review/LinearList/SqListStatic.cpp)
+add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)

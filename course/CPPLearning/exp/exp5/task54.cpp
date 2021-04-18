@@ -48,7 +48,7 @@ public:
 
 Price::Price(char *f, char *t, double m) : Station(f, t), Mile(m) {
     if (m <= 3) price = 8;
-    else price = 8 + (m - 3) / 2.0 * 0.7;
+    else price = 8 + (m - 3) * 2.0 * 0.7;
 }
 
 void Price::disp() {
