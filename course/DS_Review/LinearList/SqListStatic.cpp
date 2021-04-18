@@ -25,6 +25,18 @@ bool insert(SqList &L, int i, int e) {
     return true;
 }
 
+//删除第i个
+bool deleteElem(SqList &L, int i, int &e) {
+    if (i < 0 || i >= L.length)
+        return false;
+    e = L.data[i];
+    for (int j = i; j < L.length - 1; j++) {
+        L.data[j] = L.data[j + 1];
+    }
+    L.length--;
+    return true;
+}
+
 void display(SqList L) {
     for (int i = 0; i < L.length; i++)
         cout << L.data[i] << " ";
@@ -40,5 +52,9 @@ int main() {
     display(l);
     insert(l, 4, 666);
     display(l);
+    int e;
+    deleteElem(l, 4, e);
+    display(l);
+    cout << "e = " << e << endl;
     return 0;
 }
