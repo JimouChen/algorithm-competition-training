@@ -85,5 +85,5 @@ add_executable(leetcode46-2 oj/leetcode/leetcode46-2.cpp)
 
 # DS review
 
-add_executable(SqListStatic course/DS_Review/LinearList/SqListStatic.cpp)
+add_executable(SqListStatic course/DS_Review/LinearList/SqListStatic.cpp course/DS_Review/LinearList/SqListStatic.h)
 add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)

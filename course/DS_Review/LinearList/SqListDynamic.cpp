@@ -25,7 +25,12 @@ void increaseLength(SeqList &L, int len) {
     }
     free(p);
 }
-
+// 按位查找(1开始)，找第i个
+ElemType getElem1(SeqList L, int i) {
+    if (i < 0 || i >= L.length) {
+        cout << "i 不合法" << endl;
+    } else return L.data[i - 1];
+}
 int main() {
     return 0;
 }

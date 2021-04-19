@@ -1,47 +1,12 @@
 # include <bits/stdc++.h>
 
 using namespace std;
-#define maxsize 50
+
+#include "SqListStatic.h"
+
 /** 静态顺序表*/
-typedef int ElemType;
-typedef struct {
-    ElemType data[maxsize];
-    int length;
-} SqList;
 
-void initList(SqList &L) {
-    L.length = 0;
-}
 
-//在第i(0开始)个位置插入,这里根据题意来就行
-bool insert(SqList &L, int i, int e) {
-    if (i < 0 || i > L.length || L.length >= maxsize)
-        return false;
-    for (int j = L.length; j > i; j--) {
-        L.data[j] = L.data[j - 1];
-    }
-    L.data[i] = e;
-    L.length++;
-    return true;
-}
-
-//删除第i个
-bool deleteElem(SqList &L, int i, int &e) {
-    if (i < 0 || i >= L.length)
-        return false;
-    e = L.data[i];
-    for (int j = i; j < L.length - 1; j++) {
-        L.data[j] = L.data[j + 1];
-    }
-    L.length--;
-    return true;
-}
-
-void display(SqList L) {
-    for (int i = 0; i < L.length; i++)
-        cout << L.data[i] << " ";
-    cout << endl;
-}
 
 int main() {
     SqList l;
@@ -56,5 +21,33 @@ int main() {
     deleteElem(l, 4, e);
     display(l);
     cout << "e = " << e << endl;
+    cout << "find 7th:" << getElem1(l, 7) << endl;
+    cout << "test reverse\n";
+    reverseList(l);
+    display(l);
+    for (int i = 0; i < 3; i++)insert(l, i + 5, 666);
+    for (int i = 0; i < 3; i++)insert(l, i + 5, 555);
+    display(l);
+//    deleteAllX(l, 666);
+//    display(l);
+    reverseList(l);
+
+    display(l);
+//    deleteSToT(l, 2, 5);
+    deleteS2T(l, 2, 6);
+    display(l);
+    deleteSame(l);
+    display(l);
+    SqList L2, L1;
+    initList(L1);
+    initList(L2);
+    for (int i = 0; i < 10; i++)insert(L2, i, i);
+    for (int i = 0; i < 10; i++)insert(L1, i, i);
+    display(L1);
+    display(L2);
+    SqList L3;
+    initList(L3);
+    mergeOrderList(L1, L2, L3);
+    display(L3);
     return 0;
 }
