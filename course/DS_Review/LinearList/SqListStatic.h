@@ -148,4 +148,41 @@ bool mergeOrderList(SqList L1, SqList L2, SqList &L3) {
     return true;
 }
 
+// p17-9
+void findAndExchange(SqList &L, int x) {
+    int mid, left = 0, right = L.length - 1, i;
+    while (left <= right) {
+        mid = (left + right) / 2;
+        if (L.data[mid] == x)break;
+        else if (L.data[mid] > x) right = mid - 1;
+        else left = mid + 1;
+    }
+    if (L.data[mid] == x && mid != L.length - 1) {
+        L.data[mid] = L.data[mid + 1];
+        L.data[mid + 1] = x;
+    }
+    if (left > right) {//找不到的情况就按序插入,在right+1的位置插入
+        for (i = L.length - 1; i > right; i--)
+            L.data[i + 1] = L.data[i];
+        L.data[i + 1] = x;
+        L.length += 1;
+    }
+}
+
+//p17-10
+void reserveFromS2T(SqList &L, int left, int right) {
+    int temp;
+    for (int i = left; i <= (left + right) / 2; i++) {
+        temp = L.data[i];
+        L.data[i] = L.data[right - i];
+        L.data[right - i] = temp;
+    }
+}
+
+void use(SqList &L, int p) {
+    reserveFromS2T(L, 0, L.length - 1);
+    reserveFromS2T(L, 0, L.length - 1 - p);
+    reserveFromS2T(L, L.length - p, L.length - 1);
+}
+
 #endif //ALGORITHM_COMPETITION_TRAINING_SQLISTSTATIC_H
