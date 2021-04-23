@@ -71,6 +71,13 @@ add_executable(task53 course/CPPLearning/exp/exp5/task53.cpp)
 add_executable(task54 course/CPPLearning/exp/exp5/task54.cpp)
 add_executable(task55 course/CPPLearning/exp/exp5/task55.cpp)
 
+add_executable(task61 course/CPPLearning/exp/exp6/task61.cpp)
+add_executable(task62 course/CPPLearning/exp/exp6/task62.cpp)
+add_executable(task63 course/CPPLearning/exp/exp6/task63.cpp)
+add_executable(task64 course/CPPLearning/exp/exp6/task64.cpp)
+add_executable(task65 course/CPPLearning/exp/exp6/task65.cpp)
+
+
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
 add_executable(leetcode229 oj/leetcode/leetcode229.cpp)
@@ -87,3 +94,7 @@ add_executable(leetcode46-2 oj/leetcode/leetcode46-2.cpp)
 
 add_executable(SqListStatic course/DS_Review/LinearList/SqListStatic.cpp course/DS_Review/LinearList/SqListStatic.h)
 add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)
+
+
+
+
