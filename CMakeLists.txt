@@ -81,7 +81,7 @@ add_executable(task71 course/CPPLearning/exp/exp7/task71.cpp)
 add_executable(task72 course/CPPLearning/exp/exp7/task72.cpp)
 add_executable(task73 course/CPPLearning/exp/exp7/task73.cpp course/CPPLearning/exp/exp7/task73.h)
 add_executable(task74 course/CPPLearning/exp/exp7/task74.cpp)
-
+add_executable(task75 course/CPPLearning/exp/exp7/task75.cpp)
 
 
 # leetcode
@@ -100,5 +100,6 @@ add_executable(leetcode46-2 oj/leetcode/leetcode46-2.cpp)
 
 add_executable(SqListStatic course/DS_Review/LinearList/SqListStatic.cpp course/DS_Review/LinearList/SqListStatic.h)
 add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)
+
 
 
