@@ -39,6 +39,7 @@ add_executable(review_all course/review/review_all.cpp)
 add_executable(test_guard course/CPPLearning/base/test_guard.cpp course/CPPLearning/base/guard.h)
 add_executable(practice1 course/CPPLearning/practice/practice1.cpp)
 add_executable(practice2 course/CPPLearning/practice/practice2.cpp)
+add_executable(file_testio course/CPPLearning/base/file_testio.cpp)
 
 add_executable(sort_algorithm AlgorithmTemplate/Sort/sort_algorithm.cpp)
 
@@ -83,6 +84,7 @@ add_executable(task73 course/CPPLearning/exp/exp7/task73.cpp course/CPPLearning/
 add_executable(task74 course/CPPLearning/exp/exp7/task74.cpp)
 add_executable(task75 course/CPPLearning/exp/exp7/task75.cpp)
 
+add_executable(task81 course/CPPLearning/exp/exp8/task81.cpp course/CPPLearning/exp/exp8/task81.h)
 
 # leetcode
 add_executable(leetcode54 oj/leetcode/leetcode54.cpp)
@@ -103,3 +105,9 @@ add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)
 
 
 
+
+
+
+add_executable(task82 course/CPPLearning/exp/exp8/task82.cpp)
+add_executable(task83 course/CPPLearning/exp/exp8/task83.cpp)
+add_executable(task84 course/CPPLearning/exp/exp8/task84.cpp)
