@@ -1182,9 +1182,9 @@ void Interface::save() {
     while (itGrad != graduator.end()) {
         saveGrad << itGrad->getId() << " " << itGrad->getName() << " "
                  << itGrad->getSex() << " " << itGrad->getMajor() << " "
-                 << itGrad->getMajorNumber() << " " << itGrad->getMajor() << " "
-                 << itGrad->getClassName() << " " << itGrad->getClassNumber()
-                 << " " << itGrad->getGrade().getScore()[0] << " "
+                 << itGrad->getMajorNumber() << " " << itGrad->getClassName()
+                 << " " << itGrad->getClassNumber() << " "
+                 << itGrad->getGrade().getScore()[0] << " "
                  << itGrad->getGrade().getScore()[1] << " "
                  << itGrad->getDiction() << " " << itGrad->getTeacher() << " "
                  << itGrad->getGrade().getFinalScore() << " "
@@ -1196,6 +1196,7 @@ void Interface::save() {
     cout << endl << "文件保存完毕!" << endl;
     saveBac.close();
     saveGrad.close();
+    exit(0);
 }
 
 Interface::~Interface() {
