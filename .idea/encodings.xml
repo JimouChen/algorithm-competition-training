@@ -19,6 +19,13 @@
     <file url="file://$PROJECT_DIR$/course/Design and Analysis of Algorithms/week2/Q1_3.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/course/review/review_all.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/course/software_test/exp5.cpp" charset="GBK" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/course/student-system/bachelor.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/interface.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/interface.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/main.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/person.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/person.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/course/student-system/tool.h" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

@@ -108,3 +108,7 @@ add_executable(SqListDynamic course/DS_Review/LinearList/SqListDynamic.cpp)
 
 
 
+
+add_executable(person course/student-system/person.cpp course/student-system/person.h)
+add_executable(main course/student-system/main.cpp course/student-system/interface.h)
+add_executable(interface course/student-system/interface.cpp course/student-system/interface.h course/student-system/menu_page.h)
