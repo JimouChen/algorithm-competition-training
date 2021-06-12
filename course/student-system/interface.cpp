@@ -395,8 +395,8 @@ void Interface::displayAll() {
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getGrade().getScore()[2] << setw(8)
                          << it->getGrade().getFinalScore() << setw(8)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
 
                 it++;
@@ -409,16 +409,16 @@ void Interface::displayAll() {
             while (it != graduator.end()) {
                 if (it->getId() != -1) {
                     cout << it->getId() << setw(10) << it->getName() << setw(5)
-                         << it->getSex() << setw(20) << it->getMajor() << setw(10)
-                         << it->getMajorNumber() << setw(30)
+                         << it->getSex() << setw(20) << it->getMajor()
+                         << setw(10) << it->getMajorNumber() << setw(30)
                          << it->getClassName() << setw(15)
                          << it->getClassNumber() << setw(10)
                          << it->getGrade().getScore()[0] << setw(10)
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getDiction() << setw(10) << it->getTeacher()
-                         << setw(5) << it->getGrade().getFinalScore() << setw(10)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << setw(5) << it->getGrade().getFinalScore()
+                         << setw(10) << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
 
                 it++;
@@ -464,8 +464,8 @@ void Interface::displayClassMsg() {
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getGrade().getScore()[2] << setw(8)
                          << it->getGrade().getFinalScore() << setw(8)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }
@@ -476,17 +476,17 @@ void Interface::displayClassMsg() {
             vector<Graduator>::iterator it = graduator.begin();
             while (it != graduator.end()) {
                 if (it->getClassNumber() == clsNum && it->getId() != -1) {
-                   cout << it->getId() << setw(10) << it->getName() << setw(5)
-                         << it->getSex() << setw(20) << it->getMajor() << setw(10)
-                         << it->getMajorNumber() << setw(30)
+                    cout << it->getId() << setw(10) << it->getName() << setw(5)
+                         << it->getSex() << setw(20) << it->getMajor()
+                         << setw(10) << it->getMajorNumber() << setw(30)
                          << it->getClassName() << setw(15)
                          << it->getClassNumber() << setw(10)
                          << it->getGrade().getScore()[0] << setw(10)
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getDiction() << setw(10) << it->getTeacher()
-                         << setw(5) << it->getGrade().getFinalScore() << setw(10)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << setw(5) << it->getGrade().getFinalScore()
+                         << setw(10) << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }
@@ -538,8 +538,8 @@ void Interface::displayOneMsg() {
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getGrade().getScore()[2] << setw(8)
                          << it->getGrade().getFinalScore() << setw(8)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }
@@ -550,16 +550,16 @@ void Interface::displayOneMsg() {
             while (it != graduator.end()) {
                 if (it->getId() == xh || it->getName() == na) {
                     cout << it->getId() << setw(10) << it->getName() << setw(5)
-                         << it->getSex() << setw(20) << it->getMajor() << setw(10)
-                         << it->getMajorNumber() << setw(30)
+                         << it->getSex() << setw(20) << it->getMajor()
+                         << setw(10) << it->getMajorNumber() << setw(30)
                          << it->getClassName() << setw(15)
                          << it->getClassNumber() << setw(10)
                          << it->getGrade().getScore()[0] << setw(10)
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getDiction() << setw(10) << it->getTeacher()
-                         << setw(5) << it->getGrade().getFinalScore() << setw(10)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << setw(5) << it->getGrade().getFinalScore()
+                         << setw(10) << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }
@@ -611,8 +611,8 @@ void Interface::displayBad() {
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getGrade().getScore()[2] << setw(8)
                          << it->getGrade().getFinalScore() << setw(8)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }
@@ -635,16 +635,16 @@ void Interface::displayBad() {
                     it->getGrade().getScore()[temp] < 60 && it->getId() != -1) {
                     flag = 1;
                     cout << it->getId() << setw(10) << it->getName() << setw(5)
-                         << it->getSex() << setw(20) << it->getMajor() << setw(10)
-                         << it->getMajorNumber() << setw(30)
+                         << it->getSex() << setw(20) << it->getMajor()
+                         << setw(10) << it->getMajorNumber() << setw(30)
                          << it->getClassName() << setw(15)
                          << it->getClassNumber() << setw(10)
                          << it->getGrade().getScore()[0] << setw(10)
                          << it->getGrade().getScore()[1] << setw(10)
                          << it->getDiction() << setw(10) << it->getTeacher()
-                         << setw(5) << it->getGrade().getFinalScore() << setw(10)
-                         << it->getClassRank() << setw(10) << it->getSchoolRank()
-                         << endl;
+                         << setw(5) << it->getGrade().getFinalScore()
+                         << setw(10) << it->getClassRank() << setw(10)
+                         << it->getSchoolRank() << endl;
                 }
                 it++;
             }

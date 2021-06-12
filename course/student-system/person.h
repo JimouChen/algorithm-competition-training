@@ -9,10 +9,7 @@ class Grade {  //成绩类
 private:
     vector<double> score;  //保存每个学生的成绩
     double finalScore;     //总成绩
-//    double avgScore;       //平均成绩
     int stuType;           //学生类型，1是本科生，2是研究生
-//    ll classRank;
-//    ll schoolRank;
 
 public:
     Grade(vector<double>& sc, int type) : score(sc), stuType(type) {}
@@ -21,8 +18,6 @@ public:
 
     vector<double>& getScore();  //获取各科成绩
     double getFinalScore();      //计算一个学生总成绩
-//    double calAvgScore(string classNum,
-//                       int typeCourse);  //计算机某门课某个班级平均成绩
 };
 
 class Student {  //学生类

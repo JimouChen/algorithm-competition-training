@@ -1,7 +1,7 @@
 #include "person.h"
 #include "tool.h"
 
-/*成绩类成员函数的实现*/
+/*类成员函数的实现*/
 
 vector<double>& Grade::getScore() {
     return score;

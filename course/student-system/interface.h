@@ -28,7 +28,6 @@ public:
     void displayBad();  //在某个班级中查询某门课成绩不及格学生信息
 
     void run();  //启动
-
     void save();        //保存
     void InputBase();   //添加学生基本资料数据（一个或者批量）
     void modifyBase();  //通过学号来修改信息
