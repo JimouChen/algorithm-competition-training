@@ -13,7 +13,6 @@ private:
 
 public:
     Grade(vector<double>& sc, int type) : score(sc), stuType(type) {}
-    Grade(){}
     ~Grade(){}
 
     vector<double>& getScore();  //获取各科成绩

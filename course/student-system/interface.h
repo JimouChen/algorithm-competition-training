@@ -5,18 +5,18 @@
 using namespace std;
 
 class Interface {
-private:
+   private:
     vector<Bachelor> bachelor;
     vector<Graduator> graduator;
     vector<Class> cls;
     vector<Major> major;
     int stuType;
 
-public:
+   public:
     Interface();  //打开文件读取数据
     ~Interface();
 
-    void readFile(); //被构造函数调用
+    void readFile();  //被构造函数调用
     void menu();      //主菜单展示
     void menuBac();   //本科生管理菜单
     void menuGrad();  //研究生管理主菜单
@@ -27,7 +27,7 @@ public:
     void displayOneMsg();    //根据学号或者姓名查询学生信息
     void displayBad();  //在某个班级中查询某门课成绩不及格学生信息
 
-    void run();  //启动
+    void run();         //启动
     void save();        //保存
     void InputBase();   //添加学生基本资料数据（一个或者批量）
     void modifyBase();  //通过学号来修改信息
@@ -48,9 +48,9 @@ public:
     static bool cmpGradByScore(Graduator g1, Graduator g2);
 
     ll getNextStuId(string clsNum, int type);  //获取下一个学号
-    ll calClassRank(string clsNum, ll xh);            //计算班级排名
-    ll calSchoolRank(ll xh);             //计算全校排名
+    ll calClassRank(string clsNum, ll xh);     //计算班级排名
+    ll calSchoolRank(ll xh);                   //计算全校排名
     void saveRank();
 };
 
-#endif //INTERFACE_H
+#endif  // INTERFACE_H
