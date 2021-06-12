@@ -13,30 +13,10 @@ bool cmp(A a1, A a2) {
 }
 
 int main() {
-    vector<A> aa;
-    A q{1, 2}, w{3, 2}, e{5, 0};
-    aa.push_back(q);
-    aa.push_back(w);
-    aa.push_back(e);
-    sort(aa.begin(), aa.end(), cmp);
-    int i = 1;
-
-    vector<A>::iterator it = aa.begin();
-    while (it != aa.end()) {
-        it->rank = i;
-
-        it++;
-        if ((it - 1)->value == it->value) {
-            it->rank = (it-1)->rank;
-            it++;
-            i++;
-        }
-        i++;
-    }
-
-    for (int i = 0; i < aa.size(); ++i) {
-        cout << aa[i].rank << " ";
-    }
+    cout << "\t\t\t请输入你要管理的人员类型" << endl;
+    cout << "*\t\t\t\t1-本科生\t\t\t\t*" << endl;
+    cout << "*\t\t\t\t2-研究生\t\t\t\t*" << endl;
+    cout << "*\t\t\t\t0-退出管理系统\t\t\t*" << endl;
 
     return 0;
 }

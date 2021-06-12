@@ -1201,6 +1201,7 @@ void Interface::save() {
     cout << endl << "文件保存完毕!" << endl;
     saveBac.close();
     saveGrad.close();
+    cout<<"感谢使用学生成绩管理系统，欢迎下次使用" << endl;
     exit(0);
 }
 
