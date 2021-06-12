@@ -1,20 +1,48 @@
-#include <iostream>
-#include <vector>
+# include<iostream>
+# include <vector>
 #include <algorithm>
+
 using namespace std;
+typedef struct {
+    int rank;
+    int value;
+} A;
+
+bool cmp(A a1, A a2) {
+    return a1.value > a2.value;
+}
 
 int main() {
-    int n;
-    cout << "请输入容器大小n：" << endl;
-    cin >> n;
-    vector<int> v(n);
+    vector<A> aa;
+    A q{1, 2}, w{3, 2}, e{5, 0};
+    aa.push_back(q);
+    aa.push_back(w);
+    aa.push_back(e);
+    sort(aa.begin(), aa.end(), cmp);
+    int i = 1;
 
-    cout << "请输入n个整数" << endl;
-    for (int i = 0; i < v.size(); ++i)
-        cin >> v[i];
-    int key;
-    cout << "请输入需要统计个数的值:" << endl;
-    cin >> key;
-    cout << "值为" << key << "的数一共出现:" << count(v.begin(), v.end(), key) << "次" << endl;
+    vector<A>::iterator it = aa.begin();
+    while (it != aa.end()) {
+        it->rank = i;
+
+        it++;
+        if ((it - 1)->value == it->value) {
+            it->rank = (it-1)->rank;
+            it++;
+            i++;
+        }
+        i++;
+    }
+
+    for (int i = 0; i < aa.size(); ++i) {
+        cout << aa[i].rank << " ";
+    }
+
     return 0;
 }
+
+/**
+Program function:
+input the text from the keyboard, store it in
+character vector, count the number of lines, words and letters.#
+ */
